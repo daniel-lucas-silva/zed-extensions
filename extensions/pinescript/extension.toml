@@ -10,5 +10,5 @@ license = "MIT"
 
 [grammars.pinescript]
 repository = "https://github.com/daniel-lucas-silva/zed-extensions"
-rev = "main"
+rev = "28c8836008952c2296bddc1a7c326747b21357a8"
 path = "extensions/pinescript/tree-sitter"
