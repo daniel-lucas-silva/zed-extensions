@@ -1,0 +1,13 @@
+name = "Pine Script"
+grammar = "pinescript"
+path_suffixes = ["pine", "ps", "pinescript"]
+line_comments = ["// "]
+autoclose_before = ";:.,=}])>"
+brackets = [
+    { start = "(", end = ")", close = true, newline = false },
+    { start = "[", end = "]", close = true, newline = false },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["string", "comment"] },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["string", "comment"] },
+]
+tab_size = 4
+hard_tabs = false

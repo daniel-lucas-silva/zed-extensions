@@ -1,0 +1,28 @@
+{
+  "name": "pinescript",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for Pine Script",
+  "author": "Revanth Pobala (adapted)",
+  "license": "MIT",
+  "keywords": ["tree-sitter", "parser", "pinescript", "pine-script"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daniel-lucas-silva/zed-extensions"
+  },
+  "metadata": {
+    "name": "pinescript",
+    "version": "0.1.0"
+  },
+  "grammars": [
+    {
+      "name": "pinescript",
+      "file-types": ["pine", "ps", "pinescript"],
+      "scope": "source.pinescript",
+      "highlights-query": "../languages/pinescript/highlights.scm",
+      "indents-query": "../languages/pinescript/indents.scm",
+      "outline-query": "../languages/pinescript/outline.scm",
+      "folds-query": "../languages/pinescript/folds.scm",
+      "brackets-query": "../languages/pinescript/brackets.scm"
+    }
+  ]
+}

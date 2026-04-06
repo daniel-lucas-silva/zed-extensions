@@ -1,0 +1,12 @@
+{
+  "name": "@daniel-lucas-silva/pinescript-zed-extension",
+  "version": "0.1.0",
+  "description": "PineScript support for TradingView indicators and strategies development in Zed",
+  "scripts": {
+    "build": "cd tree-sitter && npm install && tree-sitter generate",
+    "test": "cd tree-sitter && tree-sitter test"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  }
+}
