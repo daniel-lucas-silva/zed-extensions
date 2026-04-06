@@ -1,0 +1,25 @@
+# Reference repositories (cloned for research)
+.ref/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node/Bun
+node_modules/
+bun.lockb
+
+# Build artifacts
+dist/
+build/
+*.wasm
+
+# Zed
+.zed/
