@@ -5,12 +5,9 @@ edition = "2021"
 publish = false
 license = "MIT"
 
-[lints]
-workspace = true
-
 [lib]
 path = "src/pinescript.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-zed_extension_api = "0.0.6"
+zed_extension_api = "0.1.0"
