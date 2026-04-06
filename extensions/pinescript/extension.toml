@@ -1,17 +1,14 @@
-schema_version = 1
 id = "pinescript"
-name = "Pine Script"
-version = "0.1.0"
+name = "PineScript"
+version = "0.0.0"
+schema_version = 1
 summary = "Pine Script language support for Zed"
-description = "Syntax highlighting, snippets, and LSP support for TradingView's Pine Script (v5/v6)"
+description = "Syntax highlighting and snippets for TradingView's Pine Script (v5/v6)"
 authors = ["daniel-lucas-silva"]
 repository = "https://github.com/daniel-lucas-silva/zed-extensions"
 license = "MIT"
 
 [grammars.pinescript]
-path = "tree-sitter"
-
-# Phase 2: Uncomment when LSP is ready
-# [language_servers.pine-lsp]
-# name = "Pine LSP"
-# language = "Pine Script"
+repository = "https://github.com/daniel-lucas-silva/zed-extensions"
+rev = "main"
+path = "extensions/pinescript/tree-sitter"
