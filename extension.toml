@@ -1,0 +1,11 @@
+name = "pinescript"
+version = "0.1.0"
+summary = "Pine Script language support for Zed"
+description = "Syntax highlighting and snippets for TradingView's Pine Script (v5/v6)"
+authors = ["daniel-lucas-silva"]
+repository = "https://github.com/daniel-lucas-silva/zed-extensions"
+license = "MIT"
+
+[grammars.pinescript]
+repository = "https://github.com/kvarenzn/tree-sitter-pine"
+commit = "master"

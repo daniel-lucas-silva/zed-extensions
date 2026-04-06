@@ -1,0 +1,290 @@
+{
+  "indicator": {
+    "prefix": "indicator",
+    "body": [
+      "indicator('${1:My Indicator}', shorttitle='${2:MI}', overlay=${3:true})",
+      "$0"
+    ],
+    "description": "Create a new indicator"
+  },
+  "strategy": {
+    "prefix": "strategy",
+    "body": [
+      "strategy('${1:My Strategy}', shorttitle='${2:MS}', overlay=${3:true}, initial_capital=${4:10000}, default_qty_type=strategy.percent_of_equity, default_qty_value=${5:10})",
+      "$0"
+    ],
+    "description": "Create a new strategy"
+  },
+  "library": {
+    "prefix": "library",
+    "body": ["library('${1:My Library}', '${2:mylib}')", "$0"],
+    "description": "Create a new library"
+  },
+  "plot": {
+    "prefix": "plot",
+    "body": [
+      "plot(${1:series}, title='${2:Plot}', color=${3:color.red}, linewidth=${4:2})",
+      "$0"
+    ],
+    "description": "Plot a series"
+  },
+  "hline": {
+    "prefix": "hline",
+    "body": [
+      "hline(${1:price}, title='${2:Level}', color=${3:color.gray}, linestyle=${4:hline.style_dashed})",
+      "$0"
+    ],
+    "description": "Draw horizontal line"
+  },
+  "fill": {
+    "prefix": "fill",
+    "body": [
+      "fill(${1:plot1}, ${2:plot2}, title='${3:Fill}', color=${4:color.new(color.blue, 80)})",
+      "$0"
+    ],
+    "description": "Fill between two plots"
+  },
+  "ta.sma": {
+    "prefix": "sma",
+    "body": ["ta.sma(${1:close}, ${2:14})"],
+    "description": "Simple Moving Average"
+  },
+  "ta.ema": {
+    "prefix": "ema",
+    "body": ["ta.ema(${1:close}, ${2:14})"],
+    "description": "Exponential Moving Average"
+  },
+  "ta.rsi": {
+    "prefix": "rsi",
+    "body": ["ta.rsi(${1:close}, ${2:14})"],
+    "description": "Relative Strength Index"
+  },
+  "ta.macd": {
+    "prefix": "macd",
+    "body": [
+      "[${1:macdLine}, ${2:signalLine}, ${3:histogram}] = ta.macd(${4:close}, ${5:12}, ${6:26}, ${7:9})"
+    ],
+    "description": "MACD indicator"
+  },
+  "ta.bb": {
+    "prefix": "bb",
+    "body": ["[${1:upper}, ${2:lower}] = ta.bb(${3:close}, ${4:20}, ${5:2})"],
+    "description": "Bollinger Bands"
+  },
+  "input.int": {
+    "prefix": "inputint",
+    "body": [
+      "${1:myInput} = input.int(${2:14}, title='${3:Input}', minval=${4:1}, maxval=${5:100})"
+    ],
+    "description": "Integer input"
+  },
+  "input.float": {
+    "prefix": "inputfloat",
+    "body": [
+      "${1:myInput} = input.float(${2:14.0}, title='${3:Input}', minval=${4:0.0}, maxval=${5:100.0})"
+    ],
+    "description": "Float input"
+  },
+  "input.bool": {
+    "prefix": "inputbool",
+    "body": ["${1:myInput} = input.bool(${2:true}, title='${3:Input}')"],
+    "description": "Boolean input"
+  },
+  "input.color": {
+    "prefix": "inputcolor",
+    "body": ["${1:myColor} = input.color(${2:color.red}, title='${3:Color}')"],
+    "description": "Color input"
+  },
+  "input.source": {
+    "prefix": "inputsource",
+    "body": ["${1:mySource} = input.source(${2:close}, title='${3:Source}')"],
+    "description": "Source input"
+  },
+  "input.timeframe": {
+    "prefix": "inputtimeframe",
+    "body": ["${1:myTf} = input.timeframe('${2:D}', title='${3:Timeframe}')"],
+    "description": "Timeframe input"
+  },
+  "input.symbol": {
+    "prefix": "inputsymbol",
+    "body": [
+      "${1:mySymbol} = input.symbol('${2:BTCUSD}', title='${3:Symbol}')"
+    ],
+    "description": "Symbol input"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["if ${1:condition}", "    ${2:// code}"],
+    "description": "If statement"
+  },
+  "ifelse": {
+    "prefix": "ifelse",
+    "body": [
+      "if ${1:condition}",
+      "    ${2:// code}",
+      "else",
+      "    ${3:// code}"
+    ],
+    "description": "If-else statement"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["for ${1:i} = ${2:0} to ${3:10}", "    ${4:// code}"],
+    "description": "For loop"
+  },
+  "while": {
+    "prefix": "while",
+    "body": ["while ${1:condition}", "    ${2:// code}"],
+    "description": "While loop"
+  },
+  "switch": {
+    "prefix": "switch",
+    "body": [
+      "switch ${1:expression}",
+      "    ${2:value} => ${3:result}",
+      "    => ${4:defaultResult}"
+    ],
+    "description": "Switch expression"
+  },
+  "function": {
+    "prefix": "function",
+    "body": ["${1:myFunction}(${2:param}) =>", "    ${3:// function body}"],
+    "description": "Function definition"
+  },
+  "method": {
+    "prefix": "method",
+    "body": [
+      "method ${1:myMethod}(this ${2:type}, ${3:param}) =>",
+      "    ${4:// method body}"
+    ],
+    "description": "Method definition"
+  },
+  "var": {
+    "prefix": "var",
+    "body": ["var ${1:myVar} = ${2:0}"],
+    "description": "Variable declaration with var"
+  },
+  "varip": {
+    "prefix": "varip",
+    "body": ["varip ${1:myVar} = ${2:0}"],
+    "description": "Variable declaration with varip"
+  },
+  "matrix": {
+    "prefix": "matrix",
+    "body": [
+      "${1:myMatrix} = matrix.new${2:<type>}(${3:rows}, ${4:cols}, ${5:initialValue})"
+    ],
+    "description": "Create a matrix"
+  },
+  "array": {
+    "prefix": "array",
+    "body": [
+      "${1:myArray} = array.new${2:<type>}(${3:size}, ${4:initialValue})"
+    ],
+    "description": "Create an array"
+  },
+  "alert": {
+    "prefix": "alert",
+    "body": ["alert('${1:Alert message}', alert.freq_once_per_bar_close)"],
+    "description": "Trigger an alert"
+  },
+  "strategy.entry": {
+    "prefix": "entry",
+    "body": ["strategy.entry('${1:Long}', strategy.long, qty=${2:1})"],
+    "description": "Strategy entry"
+  },
+  "strategy.close": {
+    "prefix": "close",
+    "body": ["strategy.close('${1:Long}', comment='${2:Exit}')"],
+    "description": "Strategy close"
+  },
+  "strategy.exit": {
+    "prefix": "exit",
+    "body": [
+      "strategy.exit('${1:Exit}', '${2:Long}', stop=${3:stopPrice}, limit=${4:limitPrice})"
+    ],
+    "description": "Strategy exit with stop/limit"
+  },
+  "color.new": {
+    "prefix": "colornew",
+    "body": ["color.new(${1:color.red}, ${2:80})"],
+    "description": "Create transparent color"
+  },
+  "color.rgb": {
+    "prefix": "colorrgb",
+    "body": ["color.rgb(${1:255}, ${2:0}, ${3:0})"],
+    "description": "Create RGB color"
+  },
+  "label.new": {
+    "prefix": "labelnew",
+    "body": [
+      "label.new(${1:bar_index}, ${2:high}, '${3:Text}', style=${4:label.style_label_down}, color=${5:color.red})"
+    ],
+    "description": "Create a label"
+  },
+  "line.new": {
+    "prefix": "linenew",
+    "body": [
+      "line.new(${1:bar_index}, ${2:high}, ${3:bar_index}, ${4:low}, color=${5:color.red})"
+    ],
+    "description": "Create a line"
+  },
+  "box.new": {
+    "prefix": "boxnew",
+    "body": [
+      "box.new(${1:left}, ${2:top}, ${3:right}, ${4:bottom}, bgcolor=${5:color.new(color.blue, 90)})"
+    ],
+    "description": "Create a box"
+  },
+  "table.new": {
+    "prefix": "tablenew",
+    "body": [
+      "${1:myTable} = table.new(position=${2:position.top_right}, columns=${3:2}, rows=${4:5}, bgcolor=${5:color.white})"
+    ],
+    "description": "Create a table"
+  },
+  "request.security": {
+    "prefix": "security",
+    "body": ["request.security(${1:syminfo.tickerid}, '${2:D}', ${3:close})"],
+    "description": "Request data from another timeframe"
+  },
+  "ticker.new": {
+    "prefix": "ticker",
+    "body": ["${1:myTicker} = ticker.new('${2:BINANCE}', '${3:BTCUSDT}')"],
+    "description": "Create a ticker"
+  },
+  "barstate": {
+    "prefix": "barstate",
+    "body": [
+      "barstate.${1|isfirst,isfirstconfirmed,islast,islastconfirmed,isconfirmed,isnew,isconfirmedconfirmed|}"
+    ],
+    "description": "Bar state check"
+  },
+  "time": {
+    "prefix": "time",
+    "body": ["time('${1:D}')"],
+    "description": "Time function"
+  },
+  "timestamp": {
+    "prefix": "timestamp",
+    "body": [
+      "timestamp(${1:year}, ${2:month}, ${3:day}, ${4:hour}, ${5:minute})"
+    ],
+    "description": "Create timestamp"
+  },
+  "na": {
+    "prefix": "na",
+    "body": ["na(${1:expression})"],
+    "description": "Check if value is na"
+  },
+  "nz": {
+    "prefix": "nz",
+    "body": ["nz(${1:expression}, ${2:replacement})"],
+    "description": "Replace na values"
+  },
+  "fixnan": {
+    "prefix": "fixnan",
+    "body": ["fixnan(${1:expression})"],
+    "description": "Fix na values"
+  }
+}
